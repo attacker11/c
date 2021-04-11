@@ -1,8 +1,5 @@
-var req1 = new XMLHttpRequest();
-req1.onload = req1Listener;
-req1.open('get', '/my-account', true);
-req1.withCredentials = true;
-req1.send('{}');
-function req1Listener() {
-    document.write(this.responseText);
-};
+var req = new XMLHttpRequest();
+req.open('get','https://careers.next.co.uk/my-account/',true);
+req.send();
+var token = document.getElementsByName('__RequestVerificationToken')[0].value;
+alert(token)};
